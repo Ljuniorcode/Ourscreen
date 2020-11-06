@@ -31,6 +31,7 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 	font-family: 'Roboto','sans-serif';
+	background-color: var(--color-black-dark);
 
 }
 ol, ul {
@@ -48,17 +49,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 html, body{
 	font-size: 1px;
 	min-width:320px;
-	height: 100vh;
-
-}
-
-#root {
 	min-height: 100vh;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
+
