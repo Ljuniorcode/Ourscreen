@@ -51,5 +51,14 @@ table {
 html, body{
 	font-size: 1px;
 	min-width:320px;
+	height: 100vh;
 
+}
+
+#root {
+	min-height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }

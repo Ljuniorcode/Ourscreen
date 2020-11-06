@@ -4,6 +4,8 @@ import FooterOurscreen from './components/FooterOurscreen';
 import HeaderOurscreen from './components/HeaderOurscreen';
 import LogoOurscreen from './components/LogoOurscreen';
 import LinkOurscreen from './components/LinkOurscreen';
+import HighlightOurscreen from './components/HighlightOurscreen';
+
 
 function App() {
   return (
@@ -15,7 +17,7 @@ function App() {
 
       <FooterOurscreen>
         <LogoOurscreen />
-        <p>Site feito na <strong>#Imersão React</strong> do {' '}
+        <p>Site feito na <HighlightOurscreen>#Imersão React</HighlightOurscreen> do {' '}
           <LinkOurscreen
             href="https://www.twitch.tv/collections/mUYv3gQ4JhZsnw?filter=collections"
             target="_blank"
