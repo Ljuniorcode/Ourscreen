@@ -1,12 +1,12 @@
 import React from 'react';
-import { Thumb, WrapperThumb } from './styles';
+import { Avatar, Thumb, WrapperThumb } from './styles';
 
 
-function ThumbOurscreen({ src, alt }) {
+function ThumbOurscreen({ src, alt, avatar, channelName }) {
   return (
     <WrapperThumb>
       <Thumb src={src} alt={alt} />
-
+      <Avatar src={avatar} alt={channelName} />
 
     </WrapperThumb>
   )

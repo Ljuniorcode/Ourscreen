@@ -11,7 +11,8 @@ import { Text, BannerOurscreen } from './components/BannerOurscreen';
 import TitleOurscreen from './components/TitleOurscreen';
 import DescriptionOurscreen from './components/DescriptionOurscreen';
 import ThumbOurscreen from './components/ThumbOurscreen';
-import pele from './assets/img/pele.png'
+import pele from './assets/img/pele.png';
+import peleplay from './assets/img/peleplay.jpg';
 
 function App() {
   return (
@@ -33,7 +34,12 @@ function App() {
             espetaculares.
           </DescriptionOurscreen>
         </Text>
-        <ThumbOurscreen src={pele} alt='Pelé fazendo gol de bicicleta' />
+        <ThumbOurscreen
+          src={pele}
+          alt='Pelé fazendo gol de bicicleta'
+          avatar={peleplay}
+          channelName="Futebol Nacional"
+        />
       </BannerOurscreen>
 
       <FooterOurscreen>
