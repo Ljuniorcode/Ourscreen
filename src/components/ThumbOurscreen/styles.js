@@ -27,12 +27,12 @@ export const WrapperThumb = styled.figure`
 
   &:hover {
     --move: calc(var(--space) * -1);
-    transform: translate(var(--move), var(--move));
+        transform:scale(1.02);
 
     & > ${Avatar}{
         transform:translateX(0);
         opacity:1;
-        transition: transform 100ms linear, opacity 300ms linear;
+        transition: transform 100ms 150ms linear, opacity 300ms 100ms linear;
     }
   }
 `;
