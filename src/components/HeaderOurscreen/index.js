@@ -7,13 +7,9 @@ export const HeaderOurscreen = styled.header`
   background-color:var(--color-black-dark);
   border-bottom: 4px solid var(--color-primary-medium);
   padding: 20px 0;
- 
-
 
   @media(max-width:800px){
     padding: 15rem 16rem;
-
-  
   }
 `
 export const Wrapper = styled.div`
@@ -36,9 +32,8 @@ export const Wrapper = styled.div`
        bottom:0;
        left:0;
        right:0;
-      width:100vw;
+       width:100vw;
     }
   }
-
 `;
 

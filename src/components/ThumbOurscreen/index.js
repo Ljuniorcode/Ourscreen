@@ -1,9 +1,15 @@
-import styled from 'styled-components';
+import React from 'react';
+import { Thumb, WrapperThumb } from './styles';
 
-const ThumbOurscreen = styled.img`
-  border-radius:4px;
-  border:4rem solid var(--color-frontend);
-  width:640px;
-`;
+
+function ThumbOurscreen({ src, alt }) {
+  return (
+    <WrapperThumb>
+      <Thumb src={src} alt={alt} />
+
+
+    </WrapperThumb>
+  )
+}
 
 export default ThumbOurscreen;

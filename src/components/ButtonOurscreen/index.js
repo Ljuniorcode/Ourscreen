@@ -5,7 +5,7 @@ const ButtonOurscreen = styled.button`
   background-color:var(--color-black-dark);
   color:var(--color-gray-light);
   border:2px solid var(--color-primary-medium);
-  border-radius:4px;
+  
   font-size: 18rem;
   cursor:pointer;
 `

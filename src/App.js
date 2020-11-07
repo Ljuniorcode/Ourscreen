@@ -7,7 +7,7 @@ import LinkOurscreen from './components/LinkOurscreen';
 import HighlightOurscreen from './components/HighlightOurscreen';
 import LogoImersao from './components/LogoImersao';
 import TagOurscreen from './components/TagOurscreen';
-import BannerOurscreen from './components/BannerOurscreen';
+import { Text, BannerOurscreen } from './components/BannerOurscreen';
 import TitleOurscreen from './components/TitleOurscreen';
 import DescriptionOurscreen from './components/DescriptionOurscreen';
 import ThumbOurscreen from './components/ThumbOurscreen';
@@ -25,18 +25,16 @@ function App() {
       </HeaderOurscreen>
 
       <BannerOurscreen>
-        <TagOurscreen>Dribles e Gols</TagOurscreen>
-        <TitleOurscreen>A história de dribles e gols desde 1950</TitleOurscreen>
-        <DescriptionOurscreen>
-          A arte de confundir o adversário gingando o corpo,controlando a bola e fazendo gols
-          espetaculares.
-        </DescriptionOurscreen>
-
+        <Text>
+          <TagOurscreen>Dribles e Gols</TagOurscreen>
+          <TitleOurscreen>A história de dribles e gols desde 1950</TitleOurscreen>
+          <DescriptionOurscreen>
+            A arte de confundir o adversário gingando o corpo,controlando a bola e fazendo gols
+            espetaculares.
+          </DescriptionOurscreen>
+        </Text>
         <ThumbOurscreen src={pele} alt='Pelé fazendo gol de bicicleta' />
-
-
       </BannerOurscreen>
-
 
       <FooterOurscreen>
         <LogoOurscreen />
@@ -47,7 +45,6 @@ function App() {
           >marcobrunodev {' '}
             <LogoImersao />
           </LinkOurscreen>
-
         </p>
       </FooterOurscreen>
     </>
