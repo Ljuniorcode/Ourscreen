@@ -15,24 +15,48 @@ export const Avatar = styled.img`
 
 export const Thumb = styled.img`
   width:100%;
+  opacity:0;
 `;
 
 export const WrapperThumb = styled.figure`
   --space: 10rem;
+  --border: 4rem;
+  --move-border: calc(var(--border)* -1);
+  --move-space: calc(var(--space)* -1);
+
   position: relative;
-  border: 4rem solid var(--color-frontend);
+  border: var(--border) solid var(--color-frontend);
   width: 640px;
   overflow: hidden;
   cursor:pointer;
+  transition:transform 100ms linear;
+  
+  &::before  {
+    content:'';
+    position:absolute;
+    top:0;
+    right:var(--border);
+    height:var(--space);
+    width:var(--space);
+    background-color:red;
+  }
 
   &:hover {
-    --move: calc(var(--space) * -1);
-        transform:scale(1.02);
+
+    transform: translate(var(--move),var(--move));
 
     & > ${Avatar}{
-        transform:translateX(0);
-        opacity:1;
-        transition: transform 100ms 150ms linear, opacity 300ms 100ms linear;
+      transform:translateX(0);
+      opacity:1;
+      transition: transform 100ms 150ms linear, opacity 300ms 100ms linear;
     }
   }
+
+
+`;
+
+export const Background = styled.div`
+  background-color:var(--color-frontend);
+
+
 `;
