@@ -28,7 +28,7 @@ function App() {
       <BannerOurscreen>
         <Text>
           <TagOurscreen>Dribles e Gols</TagOurscreen>
-          <TitleOurscreen>A história de dribles e gols desde 1950</TitleOurscreen>
+          <TitleOurscreen>A história de dribles e gols desde 1950 até os dias de hoje</TitleOurscreen>
           <DescriptionOurscreen>
             A arte de confundir o adversário gingando o corpo,controlando a bola e fazendo gols
             espetaculares.
@@ -37,6 +37,7 @@ function App() {
         <ThumbOurscreen
           src={pele}
           alt='Pelé fazendo gol de bicicleta'
+          title='Amistoso contra Bélgica, 1965, Pelé e suas bicicletas'
           avatar={peleplay}
           channelName="Futebol Nacional"
         />
