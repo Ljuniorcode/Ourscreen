@@ -21,7 +21,7 @@ function App() {
         <Wrapper>
           <LogoOurscreen />
 
-          <ButtonOurscreen>Novo Vídeo</ButtonOurscreen>
+          <ButtonOurscreen as="a" href="/video/new">Novo Vídeo</ButtonOurscreen>
         </Wrapper>
       </HeaderOurscreen>
 
