@@ -15,48 +15,72 @@ export const Avatar = styled.img`
 
 export const Thumb = styled.img`
   width:100%;
-  opacity:0;
+  //opacity:0;
 `;
 
 export const WrapperThumb = styled.figure`
-  --space: 10rem;
-  --border: 4rem;
-  --move-border: calc(var(--border)* -1);
-  --move-space: calc(var(--space)* -1);
-
   position: relative;
-  border: var(--border) solid var(--color-frontend);
+  //border: var(--border) solid var(--color-gramado);
   width: 640px;
   overflow: hidden;
   cursor:pointer;
   transition:transform 100ms linear;
-  
-  &::before  {
-    content:'';
-    position:absolute;
-    top:0;
-    right:var(--border);
-    height:var(--space);
-    width:var(--space);
-    background-color:red;
-  }
-
-  &:hover {
-
-    transform: translate(var(--move),var(--move));
-
-    & > ${Avatar}{
-      transform:translateX(0);
-      opacity:1;
-      transition: transform 100ms 150ms linear, opacity 300ms 100ms linear;
-    }
-  }
-
-
 `;
 
 export const Background = styled.div`
-  background-color:var(--color-frontend);
+  --space: 10rem;
+  --border:3rem;
+  --move-space: calc(var(--space) * -1);
+  
+  position:relative;
+  background-color:var(--color-gray);
 
+  &::before,
+  &::after {
+    content:' ';
+    font-size:20rem;
+    position:absolute;
+    
+    width: calc(var(--space) * 1.4);
+    height: calc(var(--space) * 1.4);
+    background-color:var(--color-gray);
+    transition:transform 100ms linear;
+  }
 
-`;
+  &::before{
+    right:0;
+    top:0;
+    transform: rotate(45deg) scale(0);
+    transform-origin:right top;
+
+  }
+
+  &::after{
+    left:0;
+    bottom:0;
+    transform-origin:left bottom;
+    z-index:-1;
+    transform:rotate(-45deg) scale(0);
+  }
+
+  &:hover {
+    &::before{
+      transform:rotate(45deg) scale(1);
+    }
+
+    &::after{
+      transform:rotate(-45deg) scale(1);
+    }
+  
+    & > ${WrapperThumb}{
+        transform: translate(var(--move-space),var(--move-space));
+
+      
+        & > ${Avatar}{
+          transform:translateX(0);
+          opacity:1;
+          transition: transform 100ms 150ms linear, opacity 300ms 100ms linear;
+        } 
+    }
+  }
+`
