@@ -1,8 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AvatarOurscreen from '../AvatarOurscreen';
-import { Background, Thumb, Timer, Title, WrapperThumb } from './styles';
+import {
+  Background, Thumb, Timer, Title, WrapperThumb,
+} from './styles';
 
-function ThumbOurscreen({ src, alt, avatar, channelName, title, timer }) {
+function ThumbOurscreen({
+  src, alt, avatar, channelName, title, timer,
+}) {
   return (
     <Background>
       <WrapperThumb>
@@ -12,7 +17,11 @@ function ThumbOurscreen({ src, alt, avatar, channelName, title, timer }) {
         <Timer>{timer}</Timer>
       </WrapperThumb>
     </Background>
-  )
+  );
 }
+
+ThumbOurscreen.propTypes = {
+  src: PropTypes.string.isRequired,
+};
 
 export default ThumbOurscreen;

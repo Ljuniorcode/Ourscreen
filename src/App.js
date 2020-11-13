@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import ButtonOurscreen from './components/ButtonOurscreen';
 import FooterOurscreen from './components/FooterOurscreen';
 import { HeaderOurscreen, Wrapper } from './components/HeaderOurscreen';
@@ -28,7 +28,7 @@ function App() {
       <BannerOurscreen>
         <Text>
           <TagOurscreen>Dribles e Gols</TagOurscreen>
-          <TitleOurscreen>A história de dribles e gols desde 1950 até os dias de hoje</TitleOurscreen>
+          <TitleOurscreen>A história de dribles e gols desde 1950 até hoje</TitleOurscreen>
           <DescriptionOurscreen>
             A arte de confundir o adversário gingando o corpo,controlando a bola e fazendo gols
             espetaculares.
@@ -36,8 +36,8 @@ function App() {
         </Text>
         <ThumbOurscreen
           src={pele}
-          alt='Pelé fazendo gol de bicicleta'
-          title='Amistoso contra Bélgica, 1965, Pelé e suas bicicletas'
+          alt="Pelé fazendo gol de bicicleta"
+          title="Amistoso contra Bélgica, 1965, Pelé e suas bicicletas"
           avatar={peleplay}
           channelName="Futebol Nacional"
           timer="8 min"
@@ -46,11 +46,19 @@ function App() {
 
       <FooterOurscreen>
         <LogoOurscreen />
-        <p><HighlightOurscreen>#Imersão React</HighlightOurscreen> com {' '}
+        <p>
+          <HighlightOurscreen>#Imersão React</HighlightOurscreen>
+          {' '}
+          com
+          {' '}
+          {' '}
           <LinkOurscreen
             href="https://www.twitch.tv/collections/mUYv3gQ4JhZsnw?filter=collections"
             target="_blank"
-          >marcobrunodev {' '}
+          >
+            marcobrunodev
+            {' '}
+            {' '}
             <LogoImersao />
           </LinkOurscreen>
         </p>
