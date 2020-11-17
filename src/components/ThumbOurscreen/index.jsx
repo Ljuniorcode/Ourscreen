@@ -20,8 +20,14 @@ function ThumbOurscreen({
   );
 }
 
+
 ThumbOurscreen.propTypes = {
   src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  channelName: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  timer: PropTypes.string.isRequired
 };
 
 export default ThumbOurscreen;

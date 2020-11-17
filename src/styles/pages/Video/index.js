@@ -4,7 +4,7 @@ import TagOurscreen from '../../../components/TagOurscreen';
 function Video() {
   return (
     <TagOurscreen>
-      <h1>Deu bom!!1</h1>
+      <h1>Deu bom!!</h1>
     </TagOurscreen>
   );
 }

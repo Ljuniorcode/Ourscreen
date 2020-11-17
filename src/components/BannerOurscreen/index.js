@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import container from '../../tools/container';
+import container from '../../styles/tools/container';
 import TagOurscreen from '../TagOurscreen';
 import TitleOurscreen from '../TitleOurscreen';
 

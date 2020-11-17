@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import ButtonOurscreen from '../ButtonOurscreen/index.js'
 import LogoOurscreen from '../LogoOurscreen'
-import container from '../../tools/container'
+import container from '../../styles/tools/container'
 
 export const HeaderOurscreen = styled.header`
   background-color:var(--color-black-dark);
