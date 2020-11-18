@@ -10,9 +10,9 @@ const ButtonOurscreen = styled.button`
   background-color:var(--color-black-dark);
   color:var(--color-gray-light);
   border:2px solid var(--color-primary-medium);
-  text-decoration:none;
   font-size: 18rem;
   cursor:pointer;
+  text-decoration:none;
   overflow:hidden;
 
   &::before{
@@ -22,8 +22,8 @@ const ButtonOurscreen = styled.button`
     width:100%;
     height:100%;
     background-color:var(--color-primary-medium);
-    transform:translateX(-100%);
-    transition:transform 200ms linear;
+    transform: translateX(150%) scaleX(1.5) skew(-30deg);
+    transition: transform 200ms linear;
   }
 
   &::after{
@@ -32,9 +32,12 @@ const ButtonOurscreen = styled.button`
   }
 
   &:hover::before {  
-    transform:translateX(0);
+    transform:translateX(-120%) scaleX(1.5) skew(-30deg);
   }
- 
+
+  &:active::after {
+    transform:scale(2);
+  }
 `
 export default ButtonOurscreen;
 
