@@ -13,7 +13,7 @@ ReactDOM.render(
     <BrowserRouter>
       <Switch>
 
-        <Route path="/" exact component={App} />
+        <Route path="/" exact component={App} />k
         <Route path="/video/new" component={Video} />
 
       </Switch>

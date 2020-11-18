@@ -8,7 +8,7 @@ const ButtonOurscreen = styled.button`
   text-decoration:none;
   font-size: 18rem;
   cursor:pointer;
-  transition:background-color 100ms linear, transform 200ms linear;
+  transition:background-color 100ms linear, transform 200ms cubic-bezier(0,0,0.73,2.24);
 
   &:hover {
     background-color:var(--color-primary-medium);
