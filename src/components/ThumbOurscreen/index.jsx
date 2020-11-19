@@ -20,7 +20,6 @@ function ThumbOurscreen({
   );
 }
 
-
 ThumbOurscreen.propTypes = {
   src: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,

@@ -13,6 +13,8 @@ import DescriptionOurscreen from './components/DescriptionOurscreen';
 import ThumbOurscreen from './components/ThumbOurscreen';
 import pele from './assets/img/pele.png';
 import peleplay from './assets/img/peleplay.jpg';
+import { Title } from './components/ThumbOurscreen/styles';
+import SectionOurscreen from './components/SectionOurscreen';
 
 function App() {
   return (
@@ -43,6 +45,14 @@ function App() {
           timer="8 min"
         />
       </BannerOurscreen>
+
+
+      <SectionOurscreen>
+        <TagOurscreen>Futebol Nacional</TagOurscreen>
+        <DescriptionOurscreen>
+          #Finta, ginga, dribles e malabares dentro de campo
+        </DescriptionOurscreen>
+      </SectionOurscreen>
 
       <FooterOurscreen>
         <LogoOurscreen />
