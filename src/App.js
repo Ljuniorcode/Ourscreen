@@ -13,7 +13,7 @@ import DescriptionOurscreen from './components/DescriptionOurscreen';
 import ThumbOurscreen from './components/ThumbOurscreen';
 import pele from './assets/img/pele.png';
 import peleplay from './assets/img/peleplay.jpg';
-import { Title } from './components/ThumbOurscreen/styles';
+// import { Title } from './components/ThumbOurscreen/styles';
 import SectionOurscreen from './components/SectionOurscreen';
 import CarouselOurscreen from './components/CarouselOurscreen';
 
@@ -54,7 +54,6 @@ const videos = [
   },
 ]
 
-
 function App() {
   return (
     <>
@@ -93,9 +92,10 @@ function App() {
           #Finta, ginga, dribles e malabares dentro de campo
 
         </DescriptionOurscreen>
+        <TagOurscreen small>Pelo - rei do futebol</TagOurscreen>
       </SectionOurscreen>
 
-      <CarouselOurscreen videos={videos} />
+      {/* <CarouselOurscreen videos={videos} /> */}
 
       <FooterOurscreen>
         <LogoOurscreen />

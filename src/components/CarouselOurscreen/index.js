@@ -1,9 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
+import ThumbOurscreen from '../ThumbOurscreen';
+import PropTypes from 'prop-types'
 
-const CarouselOurscreen = styled.h1`
-  font-size:18rem;
+function CarouselOurscreen({ videos }) {
+  return (
+    <ThumbOurscreen {...videos[0]} />
+  )
+}
 
-`;
-
+CarouselOurscreen.propTypes = {
+  videos: PropTypes.arrayOf.isRequired,
+}
 export default CarouselOurscreen;

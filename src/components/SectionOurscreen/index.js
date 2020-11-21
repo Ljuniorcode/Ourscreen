@@ -6,13 +6,19 @@ import TagOurscreen from '../TagOurscreen';
 
 
 const SectionOurscreen = styled.section`
+  display:flex;
+  flex-direction:column;
+  align-items:center;
   padding-top:20rem;
   padding-bottom:20rem;
   ${container};
-  text-align:center;
  
   & > ${TagOurscreen}{
     margin-bottom:40rem;
+  }
+
+  & > ${TagOurscreen}:not(:first-child) {
+    align-self:flex-start;
   }
 
   & > ${DescriptionOurscreen}{
