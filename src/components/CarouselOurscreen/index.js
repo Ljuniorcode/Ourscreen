@@ -1,25 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ThumbOurscreen from '../ThumbOurscreen'
 import PropTypes from 'prop-types'
-import { CarouselStyle, Right } from './styles'
+import { CarouselStyle, Right, Wrapper } from './styles'
 
 function CarouselOurscreen({ videos }) {
-  const { src, alt, title, avatar, channelName, timer, link } = videos[0]
+  const [moveRight, setMoveRight] = useState(false);
+
+  function actionRight() {
+    console.log('Antes do moveRith:', moveRight)
+    setMoveRight(true);
+    console.log('Depois do moveRith:', moveRight)
+  }
 
   return (
     <CarouselStyle>
-      {videos.map(({ src, alt, title, avatar, channelName, timer, link }) => (
-        <ThumbOurscreen
-          src={src}
-          alt={alt}
-          title={title}
-          avatar={avatar}
-          channelName={channelName}
-          timer={timer}
-          link={link}
-        />
-      ))}
-      <Right />
+      <Wrapper moveRight={moveRight}>
+        {videos.map(({ src, alt, title, avatar, channelName, timer, link }) => (
+          <ThumbOurscreen
+            src={src}
+            alt={alt}
+            title={title}
+            avatar={avatar}
+            channelName={channelName}
+            timer={timer}
+            link={link}
+          />
+        ))}
+      </Wrapper>
+      <Right onClick={actionRight} />
     </CarouselStyle>
   )
 }

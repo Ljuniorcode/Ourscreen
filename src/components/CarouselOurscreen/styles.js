@@ -1,6 +1,21 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Background, WrapperThumb } from '../ThumbOurscreen/styles'
 import arrow from '../../assets/img/arrow.svg'
+
+export const Wrapper = styled.div`
+  display:flex;
+
+  & > ${Background}{
+    margin-right:20rem;
+  }
+
+  ${({ moveRight }) =>
+    moveRight &&
+    css`
+    transform: translateX(calc(var(--thumb-width) * -1));
+  `
+  }
+`;
 
 export const Right = styled.button`
   position:absolute;
@@ -9,7 +24,7 @@ export const Right = styled.button`
   background-color:var(--color-old-silver);
   right:0;
   opacity:0;
-  border:none;
+  border: none;
   transition:opacity 200ms linear, transform 200ms linear;
   cursor:pointer;
 
@@ -31,6 +46,7 @@ export const Right = styled.button`
 `;
 
 export const CarouselStyle = styled.div`
+  --thumb-width:400px;
   --space-top-bottom:20rem;
   position:relative;
   display:flex;
@@ -41,14 +57,8 @@ export const CarouselStyle = styled.div`
   padding:var(--space-top-bottom) 30rem;
   overflow: hidden;
 
- 
-
-  & > ${Background}{
-    margin-right:20rem;
-  }
-
   & ${WrapperThumb}{
-    width:400px;
+    width:var(--thumb-width);
   }
 
   &:hover > ${Right}{
