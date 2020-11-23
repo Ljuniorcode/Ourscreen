@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import container from '../../styles/tools/container';
 import DescriptionOurscreen from '../DescriptionOurscreen';
 import TagOurscreen from '../TagOurscreen';
 
@@ -9,9 +8,8 @@ const SectionOurscreen = styled.section`
   display:flex;
   flex-direction:column;
   align-items:center;
-  padding-top:20rem;
-  padding-bottom:20rem;
-  ${container};
+  padding:0 30rem 50rem;
+
  
   & > ${TagOurscreen}{
     margin-bottom:40rem;

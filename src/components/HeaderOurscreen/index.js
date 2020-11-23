@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import ButtonOurscreen from '../ButtonOurscreen/index.js'
 import LogoOurscreen from '../LogoOurscreen'
-import container from '../../styles/tools/container'
 
 export const HeaderOurscreen = styled.header`
   background-color:var(--color-black-dark);
   border-bottom: 4px solid var(--color-primary-medium);
-  padding: 20px 0;
+  padding: 20rem 30rem;
 
   @media(max-width:800px){
     padding: 15rem 16rem;
@@ -16,7 +15,6 @@ export const Wrapper = styled.div`
   display:flex;
   justify-content:space-between;
   align-items:center;
-  ${container};
 
   @media(max-width:800px){
     justify-content:center;    

@@ -1,10 +1,20 @@
 import styled from 'styled-components'
-import { WrapperThumb } from '../ThumbOurscreen/styles';
+import { Background, WrapperThumb } from '../ThumbOurscreen/styles';
 
 const CarouselStyle = styled.div`
   display:flex;
-  & > ${WrapperThumb}{
-    
+  align-self:center;
+  width:100%;
+  padding-top:20rem;
+  padding-bottom:20rem;
+  overflow-x: hidden;
+
+  & > ${Background}{
+    margin-right:20rem;
+  }
+
+  & ${WrapperThumb}{
+    width:400px;
   }
 `;
 

@@ -54,6 +54,15 @@ const videos = [
     timer: "8 min",
     link: 'https://www.youtube.com/watch?v=wFHZWpHoKTQ'
   },
+  {
+    src: pele,
+    alt: "Pelé fazendo gol de bicicleta",
+    title: "Amistoso contra Bélgica, 1965, Pelé e suas bicicletas",
+    avatar: peleplay,
+    channelName: "Futebol Nacional",
+    timer: "8 min",
+    link: 'https://www.youtube.com/watch?v=wFHZWpHoKTQ'
+  },
 
 
 ]
