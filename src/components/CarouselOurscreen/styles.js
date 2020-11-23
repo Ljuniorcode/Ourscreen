@@ -4,6 +4,7 @@ import arrow from '../../assets/img/arrow.svg'
 
 export const Wrapper = styled.div`
   display:flex;
+  transition: transform 200ms;
 
   & > ${Background}{
     margin-right:20rem;
@@ -12,7 +13,7 @@ export const Wrapper = styled.div`
   ${({ moveRight }) =>
     moveRight &&
     css`
-    transform: translateX(calc(var(--thumb-width) * -1));
+    transform: translateX(calc(var(--thumb-width) * ${moveRight} * -1));
   `
   }
 `;

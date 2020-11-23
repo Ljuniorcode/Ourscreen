@@ -4,12 +4,11 @@ import PropTypes from 'prop-types'
 import { CarouselStyle, Right, Wrapper } from './styles'
 
 function CarouselOurscreen({ videos }) {
-  const [moveRight, setMoveRight] = useState(false);
+  const [moveRight, setMoveRight] = useState(0);
+
 
   function actionRight() {
-    console.log('Antes do moveRith:', moveRight)
-    setMoveRight(true);
-    console.log('Depois do moveRith:', moveRight)
+    setMoveRight(oldMoveRight => oldMoveRight + 1);
   }
 
   return (
