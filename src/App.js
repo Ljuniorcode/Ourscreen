@@ -19,39 +19,43 @@ import CarouselOurscreen from './components/CarouselOurscreen';
 
 const videos = [
   {
-    src: { pele },
+    src: pele,
     alt: "Pelé fazendo gol de bicicleta",
     title: "Amistoso contra Bélgica, 1965, Pelé e suas bicicletas",
-    avatar: { peleplay },
+    avatar: peleplay,
     channelName: "Futebol Nacional",
     timer: "8 min",
     link: 'https://www.youtube.com/watch?v=wFHZWpHoKTQ'
   },
   {
-    src: { pele },
+    src: pele,
     alt: "Pelé fazendo gol de bicicleta",
     title: "Amistoso contra Bélgica, 1965, Pelé e suas bicicletas",
-    avatar: { peleplay },
-    channelName: "Futebol Nacional",
-    timer: "8 min",
-    link: 'https://www.youtube.com/watch?v=wFHZWpHoKTQ'
-  }, {
-    src: { pele },
-    alt: "Pelé fazendo gol de bicicleta",
-    title: "Amistoso contra Bélgica, 1965, Pelé e suas bicicletas",
-    avatar: { peleplay },
-    channelName: "Futebol Nacional",
-    timer: "8 min",
-    link: 'https://www.youtube.com/watch?v=wFHZWpHoKTQ'
-  }, {
-    src: { pele },
-    alt: "Pelé fazendo gol de bicicleta",
-    title: "Amistoso contra Bélgica, 1965, Pelé e suas bicicletas",
-    avatar: { peleplay },
+    avatar: peleplay,
     channelName: "Futebol Nacional",
     timer: "8 min",
     link: 'https://www.youtube.com/watch?v=wFHZWpHoKTQ'
   },
+  {
+    src: pele,
+    alt: "Pelé fazendo gol de bicicleta",
+    title: "Amistoso contra Bélgica, 1965, Pelé e suas bicicletas",
+    avatar: peleplay,
+    channelName: "Futebol Nacional",
+    timer: "8 min",
+    link: 'https://www.youtube.com/watch?v=wFHZWpHoKTQ'
+  },
+  {
+    src: pele,
+    alt: "Pelé fazendo gol de bicicleta",
+    title: "Amistoso contra Bélgica, 1965, Pelé e suas bicicletas",
+    avatar: peleplay,
+    channelName: "Futebol Nacional",
+    timer: "8 min",
+    link: 'https://www.youtube.com/watch?v=wFHZWpHoKTQ'
+  },
+
+
 ]
 
 function App() {
@@ -93,9 +97,9 @@ function App() {
 
         </DescriptionOurscreen>
         <TagOurscreen small>Pelo - rei do futebol</TagOurscreen>
+        <CarouselOurscreen videos={videos} />
       </SectionOurscreen>
 
-      {/* <CarouselOurscreen videos={videos} /> */}
 
       <FooterOurscreen>
         <LogoOurscreen />
