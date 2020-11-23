@@ -63,6 +63,24 @@ const videos = [
     timer: "8 min",
     link: 'https://www.youtube.com/watch?v=wFHZWpHoKTQ'
   },
+  {
+    src: pele,
+    alt: "Pelé fazendo gol de bicicleta",
+    title: "Amistoso contra Bélgica, 1965, Pelé e suas bicicletas",
+    avatar: peleplay,
+    channelName: "Futebol Nacional",
+    timer: "8 min",
+    link: 'https://www.youtube.com/watch?v=wFHZWpHoKTQ'
+  },
+  {
+    src: pele,
+    alt: "Pelé fazendo gol de bicicleta",
+    title: "Amistoso contra Bélgica, 1965, Pelé e suas bicicletas",
+    avatar: peleplay,
+    channelName: "Futebol Nacional",
+    timer: "8 min",
+    link: 'https://www.youtube.com/watch?v=wFHZWpHoKTQ'
+  },
 
 
 ]
@@ -103,12 +121,10 @@ function App() {
           #Finta, ginga, dribles e malabares dentro de campo
           #Finta, ginga, dribles e malabares dentro de campo
           #Finta, ginga, dribles e malabares dentro de campo
-
-        </DescriptionOurscreen>
+          </DescriptionOurscreen>
         <TagOurscreen small>Pelo - rei do futebol</TagOurscreen>
         <CarouselOurscreen videos={videos} />
       </SectionOurscreen>
-
 
       <FooterOurscreen>
         <LogoOurscreen />

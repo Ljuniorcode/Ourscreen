@@ -16,6 +16,7 @@ const SectionOurscreen = styled.section`
   }
 
   & > ${TagOurscreen}:not(:first-child) {
+    margin-left:30rem;
     align-self:flex-start;
   }
 

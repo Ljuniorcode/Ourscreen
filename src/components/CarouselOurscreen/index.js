@@ -1,7 +1,7 @@
 import React from 'react'
 import ThumbOurscreen from '../ThumbOurscreen'
 import PropTypes from 'prop-types'
-import CarouselStyle from './styles'
+import { CarouselStyle, Right } from './styles'
 
 function CarouselOurscreen({ videos }) {
   const { src, alt, title, avatar, channelName, timer, link } = videos[0]
@@ -19,6 +19,7 @@ function CarouselOurscreen({ videos }) {
           link={link}
         />
       ))}
+      <Right />
     </CarouselStyle>
   )
 }
