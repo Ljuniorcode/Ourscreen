@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ThumbOurscreen from '../ThumbOurscreen'
-import PropTypes from 'prop-types'
+import PropTypes, { func } from 'prop-types'
 import { CarouselStyle, Left, Right, Wrapper } from './styles'
 
 function CarouselOurscreen({ videos }) {
@@ -15,8 +15,12 @@ function CarouselOurscreen({ videos }) {
     setMove(oldMove => oldMove + 1);
   }
 
+  function leftShow() {
+    return move < 0
+  }
+
   return (
-    <CarouselStyle>
+    <CarouselStyle leftShow={leftShow()} rightShow={true}>
       <Left onClick={actionLeft} />
       <Wrapper move={move}>
         {videos.map(({ src, alt, title, avatar, channelName, timer, link }) => (
