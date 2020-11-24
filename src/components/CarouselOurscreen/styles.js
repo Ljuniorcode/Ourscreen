@@ -3,17 +3,21 @@ import { Background, WrapperThumb } from '../ThumbOurscreen/styles'
 import arrow from '../../assets/img/arrow.svg'
 
 export const Wrapper = styled.div`
+  --space-right:20rem;
   display:flex;
   transition: transform 200ms;
 
   & > ${Background}{
-    margin-right:20rem;
+    margin-right:var(--space-right);
   }
 
   ${({ move }) =>
-    move &&
     css`
-    transform: translateX(calc(var(--thumb-width) * ${move}));
+    transform: translateX(
+      calc(
+        (var(--thumb-width) + var(--space-right)) * ${move}
+      )
+    );
   `
   }
 `;
@@ -34,9 +38,6 @@ const Arrow = css`
     display:inline-block;
     opacity:1;
   }
-
-
- 
 `;
 
 export const Right = styled.button`
@@ -74,19 +75,21 @@ export const Left = styled.button`
 `;
 
 export const CarouselStyle = styled.div`
-  --thumb-width:400px;
   --space-top-bottom:20rem;
+  --space-right-left:30rem;
+  --thumb-width:400px;
   position:relative;
   display:flex;
   align-items:center;
   align-self:flex-start;
   box-sizing:border-box;
   width:100%;
-  padding:var(--space-top-bottom) 30rem;
+  padding:var(--space-top-bottom) var(--space-rith-left);
   overflow: hidden;
 
   & ${WrapperThumb}{
     width:var(--thumb-width);
+    box-sizing:border-box;
   }
 
   &:hover > ${Right} {
