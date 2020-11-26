@@ -2,8 +2,16 @@ import styled, { css } from 'styled-components'
 import { Background, WrapperThumb } from '../ThumbOurscreen/styles'
 import arrow from '../../assets/img/arrow.svg'
 
+const thumbWidth = 400;
+const spaceRight = 20;
+
+function moveCarousel(move) {
+  return thumbWidth + spaceRight * move
+
+}
+
 export const Wrapper = styled.div`
-  --space-right:20rem;
+  --space-right:${spaceRight}rem;
   display:flex;
   transition: transform 200ms;
 
@@ -11,12 +19,18 @@ export const Wrapper = styled.div`
     margin-right:var(--space-right);
   }
 
-  ${({ move }) =>
-    css`
+  ${({ move, moveLastRight }) =>
+    moveLastRight
+      ?
+      css`
     transform: translateX(
-      calc(
-        (var(--thumb-width) + var(--space-right)) * ${move}
-      )
+      calc((${moveLastRight}px  + var(--space-right-left)) * -1)
+    );
+    `
+      :
+      css`
+    transform: translateX(
+      
     );
   `
   }
@@ -77,7 +91,7 @@ export const Left = styled.button`
 export const CarouselStyle = styled.div`
   --space-top-bottom:20rem;
   --space-right-left:30rem;
-  --thumb-width:400px;
+  --thumb-width:${thumbWidth}px;
   position:relative;
   display:flex;
   align-items:center;

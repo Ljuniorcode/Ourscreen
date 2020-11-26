@@ -1,18 +1,28 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import ThumbOurscreen from '../ThumbOurscreen'
 import PropTypes from 'prop-types'
 import { CarouselStyle, Left, Right, Wrapper } from './styles'
+import { useWindowWidth } from '@react-hook/window-size';
 
 function CarouselOurscreen({ videos }) {
   const [move, setMove] = useState(0);
-  const $wrapper = useRef(null)
+  const [wrapperWidth, setWrapperWidth] = useState()
+  const winWidth = useWindowWidth();
+  const $wrapper = useRef(null);
+
+  useEffect(
+    () => setWrapperWidth($wrapper.current.getBoundingClientRect().width),
+    []
+  );
 
   function actionRight() {
     setMove(oldMove => oldMove - 1);
+    console.log($wrapper.current.getBoundingClientRect())
   }
 
   function actionLeft() {
     setMove(oldMove => oldMove + 1);
+    console.log($wrapper.current.getBoundingClientRect())
   }
 
   function leftShow() {
@@ -22,7 +32,8 @@ function CarouselOurscreen({ videos }) {
   return (
     <CarouselStyle leftShow={leftShow()} rightShow={true}>
       <Left onClick={actionLeft} />
-      <Wrapper move={move} ref={$wrapper}>
+      <Wrapper move={move} moveLastRight={false && wrapperWidth - winWidth} ref={$wrapper}>
+
         {videos.map(({ src, alt, title, avatar, channelName, timer, link }) => (
           <ThumbOurscreen
             src={src}
