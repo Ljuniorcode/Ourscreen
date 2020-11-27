@@ -6,9 +6,10 @@ import { useWindowWidth } from '@react-hook/window-size';
 
 function CarouselOurscreen({ videos }) {
   const [move, setMove] = useState(0);
-  const [wrapperWidth, setWrapperWidth] = useState()
-  const winWidth = useWindowWidth();
+  const [wrapperWidth, setWrapperWidth] = useState(0)
+  const winWidth = useWindowWidth()
   const $wrapper = useRef(null);
+
 
   useEffect(
     () => setWrapperWidth($wrapper.current.getBoundingClientRect().width),
@@ -17,22 +18,18 @@ function CarouselOurscreen({ videos }) {
 
   function actionRight() {
     setMove(oldMove => oldMove - 1);
-    console.log($wrapper.current.getBoundingClientRect())
   }
 
   function actionLeft() {
     setMove(oldMove => oldMove + 1);
-    console.log($wrapper.current.getBoundingClientRect())
   }
 
-  function leftShow() {
-    return move < 0
-  }
+
 
   return (
-    <CarouselStyle leftShow={leftShow()} rightShow={true}>
+    <CarouselStyle move={move}>
       <Left onClick={actionLeft} />
-      <Wrapper move={move} moveLastRight={false && wrapperWidth - winWidth} ref={$wrapper}>
+      <Wrapper move={move} moveLastRight={wrapperWidth - winWidth} ref={$wrapper}>
 
         {videos.map(({ src, alt, title, avatar, channelName, timer, link }) => (
           <ThumbOurscreen

@@ -4,11 +4,27 @@ import arrow from '../../assets/img/arrow.svg'
 
 const thumbWidth = 400;
 const spaceRight = 20;
+const spaceRightLeft = 30;
 
-function moveCarousel(move) {
-  return thumbWidth + spaceRight * move
-
+function moveCarousel(move, moveLastRight) {
+  const oneStep = (thumbWidth + spaceRight) * move
+  const lastStep = (moveLastRight + spaceRightLeft) * -1
+  if (oneStep !== 0 && oneStep < lastStep) {
+    return lastStep
+  }
+  return oneStep
 }
+
+function leftShow(move) {
+  return move < 0
+}
+
+function rightShow(move, moveLastRight) {
+  const oneStep = (thumbWidth + spaceRight) * move
+  const lastStep = (moveLastRight + spaceRightLeft) * -1
+  return true;
+}
+
 
 export const Wrapper = styled.div`
   --space-right:${spaceRight}rem;
@@ -19,21 +35,7 @@ export const Wrapper = styled.div`
     margin-right:var(--space-right);
   }
 
-  ${({ move, moveLastRight }) =>
-    moveLastRight
-      ?
-      css`
-    transform: translateX(
-      calc((${moveLastRight}px  + var(--space-right-left)) * -1)
-    );
-    `
-      :
-      css`
-    transform: translateX(
-      
-    );
-  `
-  }
+  
 `;
 
 const Arrow = css`
@@ -89,9 +91,9 @@ export const Left = styled.button`
 `;
 
 export const CarouselStyle = styled.div`
-  --space-top-bottom:20rem;
-  --space-right-left:30rem;
-  --thumb-width:${thumbWidth}px;
+  --space-top-bottom: 20rem;
+  --space-right-left: ${spaceRightLeft}rem;
+  --thumb-width: ${thumbWidth}px;
   position:relative;
   display:flex;
   align-items:center;
@@ -106,13 +108,16 @@ export const CarouselStyle = styled.div`
     box-sizing:border-box;
   }
 
-  &:hover > ${Right} {
-    opacity:0.8;
+  &:hover > ${Right} {    
+    display:block;
+    opacity:0.8; 
   }
   
   
   &:hover > ${Left}{
-    ${({ leftShow }) => leftShow ? css`
+    ${({ move }) =>
+    leftShow(move)
+      ? css`
       display:block;
       opacity:0.8;
     
@@ -128,4 +133,10 @@ export const CarouselStyle = styled.div`
     opacity:0.9;
     transform-origin: right center;
   }
+
+  ${({ move, moveLastRight }) =>
+    css` & > ${Wrapper} {
+    transform: translateX(${moveCarousel(move, moveLastRight)}px);
+    }
+  `}
 `;
