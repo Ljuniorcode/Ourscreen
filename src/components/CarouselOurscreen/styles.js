@@ -126,7 +126,6 @@ export const CarouselStyle = styled.div`
       opacity:0;
     `
   }
-
   }
 
   & > ${Right}:hover {
