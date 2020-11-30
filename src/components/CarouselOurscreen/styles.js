@@ -6,26 +6,6 @@ const thumbWidth = 400;
 const spaceRight = 20;
 const spaceRightLeft = 30;
 
-function moveCarousel(move, moveLastRight) {
-  const oneStep = (thumbWidth + spaceRight) * move
-  const lastStep = (moveLastRight + spaceRightLeft) * -1
-  if (oneStep !== 0 && oneStep < lastStep) {
-    return lastStep
-  }
-  return oneStep
-}
-
-function leftShow(move) {
-  return move < 0
-}
-
-function rightShow(move, moveLastRight) {
-  const oneStep = (thumbWidth + spaceRight) * move
-  const lastStep = (moveLastRight + spaceRightLeft) * -1
-  return true;
-}
-
-
 export const Wrapper = styled.div`
   --space-right:${spaceRight}rem;
   display:flex;
@@ -90,6 +70,34 @@ export const Left = styled.button`
   }
 `;
 
+function moveCarousel(move, moveLastRight) {
+  const oneStep = (thumbWidth + spaceRight) * move
+  const lastStep = (moveLastRight + spaceRightLeft) * -1
+  if (oneStep !== 0 && oneStep < lastStep) {
+
+    return css`
+    & > ${Wrapper} {
+      transform: translateX(${lastStep}px);
+    }
+
+    &:hover > ${Right} {    
+    display:none;
+    opacity:0.8; 
+    }
+    `;
+  }
+
+  return css`
+    & > ${Wrapper} {
+      transform: translateX(${oneStep}px);
+    }
+`
+}
+
+function leftShow(move) {
+  return move < 0
+}
+
 export const CarouselStyle = styled.div`
   --space-top-bottom: 20rem;
   --space-right-left: ${spaceRightLeft}rem;
@@ -133,9 +141,8 @@ export const CarouselStyle = styled.div`
     transform-origin: right center;
   }
 
-  ${({ move, moveLastRight }) =>
-    css` & > ${Wrapper} {
-    transform: translateX(${moveCarousel(move, moveLastRight)}px);
-    }
-  `}
-`;
+  ${({ move, moveLastRight }) => moveCarousel(move, moveLastRight)}
+
+  `;
+
+

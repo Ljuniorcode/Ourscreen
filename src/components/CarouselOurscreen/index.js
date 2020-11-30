@@ -27,9 +27,9 @@ function CarouselOurscreen({ videos }) {
 
 
   return (
-    <CarouselStyle move={move}>
+    <CarouselStyle move={move} moveLastRight={wrapperWidth - winWidth}>
       <Left onClick={actionLeft} />
-      <Wrapper move={move} moveLastRight={wrapperWidth - winWidth} ref={$wrapper}>
+      <Wrapper ref={$wrapper}>
 
         {videos.map(({ src, alt, title, avatar, channelName, timer, link }) => (
           <ThumbOurscreen
