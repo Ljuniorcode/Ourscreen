@@ -13,9 +13,7 @@ export const Wrapper = styled.div`
 
   & > ${Background}{
     margin-right:var(--space-right);
-  }
-
-  
+  }  
 `;
 
 const Arrow = css`
